@@ -17,13 +17,13 @@ static int barheight;
 static char xresourcesfont[30];
 
 // empty background
-static char col_background[] = "#cc00ff"; /* top bar dark background*/
+static char col_background[] = "#292f3a"; /* top bar dark background*/
 // fonts
-static char col_white[] = "#000000";/*white for fonts*/
+static char col_white[] = "#ffffff";/*white for fonts*/
 
 // border active and inactive
-static char col_pastel_blue[] = "#cc00ff";/*unsaturated for focused border*/
-static char col_light_blue[] = "#cc00ff";/*focused windows d */
+static char col_pastel_blue[] = "#747c90";/*unsaturated for focused border*/
+static char col_light_blue[] = "#4dadd4";/*focused windows d */
 
 // blue window indicator
 static char col_blue[] = "#5294E2";/*focused instantmenu or topbar d */
@@ -185,6 +185,7 @@ static const char *playerprevious[] = { "playerctl", "previous", NULL};
 static const char *playerpause[] = { "playerctl", "play-pause", NULL};
 static const char *spoticli[] = { "spoticli", "m", NULL};
 static const char *telegramdesktop[] = {"telegram-desktop", NULL};
+static const char *startupscript[] = {"~/.config/instantos/startup.sh", NULL};
 
 #include "push.c"
 
@@ -231,6 +232,7 @@ static Key dkeys[] = {
 	{0, XK_F1, spawn, {.v = helpcmd} },
 	{0, XK_m, spawn, {.v = spoticli} },
 	{0, XK_t, spawn, {.v = telegramdesktop} },
+	{0, XK_s, spawn, {.v = startupscript} },
 	{0, XK_Return, spawn, {.v = termcmd} },
 	{0, XK_plus, spawn, {.v = upvol} },
 	{0, XK_minus, spawn, {.v = downvol} },
@@ -311,7 +313,7 @@ static Key keys[] = {
 	{MODKEY|ShiftMask|Mod4Mask, XK_s, toggleanimated, {0} },
 	{MODKEY|ControlMask,                    XK_s,      togglesticky,   {0} },
 	{MODKEY|ShiftMask,                    XK_s,      createscratchpad, {0}},
-	{MODKEY,                    XK_s, togglescratchpad, {0}},
+	// {MODKEY,                    XK_s, togglescratchpad, {0}},
 	{MODKEY|ControlMask, XK_f, togglefakefullscreen, {0} },
 	{MODKEY|ShiftMask, XK_f, tempfullscreen, {0} },
 	{MODKEY | ShiftMask | Mod4Mask, XK_d, toggledoubledraw, {0} },

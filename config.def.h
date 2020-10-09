@@ -68,7 +68,7 @@ static const char *colors[][4] = {
 };
 
 /* tagging */
-static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "s" };
+static const char *tags[] = { "", "{}", "$", "", "", "", "", "", "" };
 /* ffox, programming1, term, music, steam, folder, play icon, document, message  */
 static const char *tagsalt[] = { "", "{}", "$", "", "", "", "", "", "" };
 
@@ -185,7 +185,6 @@ static const char *playerprevious[] = { "playerctl", "previous", NULL};
 static const char *playerpause[] = { "playerctl", "play-pause", NULL};
 static const char *spoticli[] = { "spoticli", "m", NULL};
 static const char *telegramdesktop[] = {"telegram-desktop", NULL};
-static const char *startupscript[] = {"~/.config/instantos/startup.sh", NULL};
 
 #include "push.c"
 
@@ -232,7 +231,6 @@ static Key dkeys[] = {
 	{0, XK_F1, spawn, {.v = helpcmd} },
 	{0, XK_m, spawn, {.v = spoticli} },
 	{0, XK_t, spawn, {.v = telegramdesktop} },
-	{0, XK_s, spawn, {.v = startupscript} },
 	{0, XK_Return, spawn, {.v = termcmd} },
 	{0, XK_plus, spawn, {.v = upvol} },
 	{0, XK_minus, spawn, {.v = downvol} },

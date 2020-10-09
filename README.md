@@ -74,3 +74,7 @@ This makes it a possible choice for new or casual users that cannot be bothered 
 stuff just to do their email. 
 
 ### instantOS is still in early beta, contributions always welcome
+
+### NOTE
+
+Copy the path of the `runinstantwm.sh` to the Exec section of `/usr/share/xsessions/instantwm.desktop`

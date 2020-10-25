@@ -4,5 +4,6 @@ pkill /usr/lib/xfce4/notifyd/xfce4-notifyd
 dwmblocks &
 ~/Photos/nitrogen-wallpaper-switch.sh &
 xset r rate 200 25
+sshfs ubuntu@pinode1:/mnt/hdd ~/PiMount
 nm-applet &
 exec instantwm

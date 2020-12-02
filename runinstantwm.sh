@@ -1,6 +1,7 @@
 pkill /usr/lib/xfce4/notifyd/xfce4-notifyd
 /usr/lib/xfce4/notifyd/xfce4-notifyd &
 ~/.screenlayout/dual.sh &
+thunderbird --headless &
 /home/angad/Repos/instantWM/statusbar.sh &
 ~/Photos/nitrogen-wallpaper-switch.sh &
 xset r rate 200 25
